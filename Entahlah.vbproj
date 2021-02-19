@@ -142,5 +142,14 @@
   <ItemGroup>
     <None Include="Resources\delete_bin_30px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email_send_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send_email_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_24px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

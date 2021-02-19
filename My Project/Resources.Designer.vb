@@ -113,6 +113,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property email_send_30px() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("email_send_30px", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property maximize_window_32px() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("maximize_window_32px", resourceCulture)
@@ -133,6 +143,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property print_24px() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("print_24px", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property save_30px() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("save_30px", resourceCulture)
@@ -146,6 +166,16 @@ Namespace My.Resources
         Friend ReadOnly Property search_30px() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("search_30px", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property send_email_24px() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("send_email_24px", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

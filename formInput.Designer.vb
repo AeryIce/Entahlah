@@ -27,44 +27,62 @@ Partial Class formInput
 		Me.lbHeader = New System.Windows.Forms.Label()
 		Me.tmLabel = New System.Windows.Forms.Timer(Me.components)
 		Me.gbInputBuku = New System.Windows.Forms.GroupBox()
+		Me.gbMenu = New System.Windows.Forms.GroupBox()
+		Me.rbData = New System.Windows.Forms.RadioButton()
+		Me.rbInput = New System.Windows.Forms.RadioButton()
+		Me.gbCRUD = New System.Windows.Forms.GroupBox()
+		Me.gbDataBuku = New System.Windows.Forms.GroupBox()
+		Me.pnInput = New System.Windows.Forms.Panel()
+		Me.TextBox2 = New System.Windows.Forms.TextBox()
+		Me.TextBox4 = New System.Windows.Forms.TextBox()
+		Me.lbCIP = New System.Windows.Forms.Label()
+		Me.lbPetugas = New System.Windows.Forms.Label()
+		Me.TextBox1 = New System.Windows.Forms.TextBox()
+		Me.TextBox3 = New System.Windows.Forms.TextBox()
+		Me.lbKode = New System.Windows.Forms.Label()
+		Me.lbQty = New System.Windows.Forms.Label()
+		Me.tbKode = New System.Windows.Forms.TextBox()
+		Me.lbJudul = New System.Windows.Forms.Label()
+		Me.pnDGV = New System.Windows.Forms.Panel()
+		Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+		Me.gbScan = New System.Windows.Forms.GroupBox()
 		Me.tbCariIsbn = New System.Windows.Forms.TextBox()
 		Me.lbISBN = New System.Windows.Forms.Label()
 		Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-		Me.gbScan = New System.Windows.Forms.GroupBox()
-		Me.gbDataBuku = New System.Windows.Forms.GroupBox()
-		Me.lbCIP = New System.Windows.Forms.Label()
-		Me.TextBox1 = New System.Windows.Forms.TextBox()
-		Me.tbKode = New System.Windows.Forms.TextBox()
-		Me.lbKode = New System.Windows.Forms.Label()
-		Me.TextBox2 = New System.Windows.Forms.TextBox()
-		Me.lbJudul = New System.Windows.Forms.Label()
-		Me.TextBox3 = New System.Windows.Forms.TextBox()
-		Me.lbQty = New System.Windows.Forms.Label()
-		Me.TextBox4 = New System.Windows.Forms.TextBox()
-		Me.lbPetugas = New System.Windows.Forms.Label()
-		Me.gbCRUD = New System.Windows.Forms.GroupBox()
-		Me.gbMenu = New System.Windows.Forms.GroupBox()
-		Me.rbInput = New System.Windows.Forms.RadioButton()
-		Me.rbData = New System.Windows.Forms.RadioButton()
-		Me.pnInput = New System.Windows.Forms.Panel()
-		Me.pnDGV = New System.Windows.Forms.Panel()
-		Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+		Me.gbLapor = New System.Windows.Forms.GroupBox()
+		Me.lbLaporCIP = New System.Windows.Forms.Label()
+		Me.TextBox5 = New System.Windows.Forms.TextBox()
 		Me.btDelete = New System.Windows.Forms.Button()
 		Me.btEditUpdate = New System.Windows.Forms.Button()
 		Me.btSimpan = New System.Windows.Forms.Button()
+		Me.btCetak = New System.Windows.Forms.Button()
+		Me.btEmailLapor = New System.Windows.Forms.Button()
 		Me.btCari = New System.Windows.Forms.Button()
 		Me.Button1 = New System.Windows.Forms.Button()
 		Me.btMaximize = New System.Windows.Forms.Button()
 		Me.btMinimize = New System.Windows.Forms.Button()
+		Me.pnCari = New System.Windows.Forms.Panel()
+		Me.gbCariData = New System.Windows.Forms.GroupBox()
+		Me.lbISBN_CIP_Judul = New System.Windows.Forms.Label()
+		Me.tbCariData = New System.Windows.Forms.TextBox()
+		Me.rbISBN = New System.Windows.Forms.RadioButton()
+		Me.rbCIP = New System.Windows.Forms.RadioButton()
+		Me.rbJudul = New System.Windows.Forms.RadioButton()
+		Me.pnScanBuku = New System.Windows.Forms.Panel()
+		Me.Button2 = New System.Windows.Forms.Button()
 		Me.pnWindows.SuspendLayout()
 		Me.gbInputBuku.SuspendLayout()
-		Me.gbScan.SuspendLayout()
-		Me.gbDataBuku.SuspendLayout()
-		Me.gbCRUD.SuspendLayout()
 		Me.gbMenu.SuspendLayout()
+		Me.gbCRUD.SuspendLayout()
+		Me.gbDataBuku.SuspendLayout()
 		Me.pnInput.SuspendLayout()
 		Me.pnDGV.SuspendLayout()
 		CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+		Me.gbScan.SuspendLayout()
+		Me.gbLapor.SuspendLayout()
+		Me.pnCari.SuspendLayout()
+		Me.gbCariData.SuspendLayout()
+		Me.pnScanBuku.SuspendLayout()
 		Me.SuspendLayout()
 		'
 		'pnWindows
@@ -100,10 +118,10 @@ Partial Class formInput
 		'gbInputBuku
 		'
 		Me.gbInputBuku.BackColor = System.Drawing.Color.LightBlue
+		Me.gbInputBuku.Controls.Add(Me.pnScanBuku)
 		Me.gbInputBuku.Controls.Add(Me.gbMenu)
 		Me.gbInputBuku.Controls.Add(Me.gbCRUD)
 		Me.gbInputBuku.Controls.Add(Me.gbDataBuku)
-		Me.gbInputBuku.Controls.Add(Me.gbScan)
 		Me.gbInputBuku.FlatStyle = System.Windows.Forms.FlatStyle.Flat
 		Me.gbInputBuku.Location = New System.Drawing.Point(12, 85)
 		Me.gbInputBuku.Name = "gbInputBuku"
@@ -111,136 +129,38 @@ Partial Class formInput
 		Me.gbInputBuku.TabIndex = 2
 		Me.gbInputBuku.TabStop = False
 		'
-		'tbCariIsbn
+		'gbMenu
 		'
-		Me.tbCariIsbn.Font = New System.Drawing.Font("Lucida Console", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.tbCariIsbn.Location = New System.Drawing.Point(117, 27)
-		Me.tbCariIsbn.Name = "tbCariIsbn"
-		Me.tbCariIsbn.Size = New System.Drawing.Size(168, 28)
-		Me.tbCariIsbn.TabIndex = 1
+		Me.gbMenu.Controls.Add(Me.rbData)
+		Me.gbMenu.Controls.Add(Me.rbInput)
+		Me.gbMenu.Location = New System.Drawing.Point(668, 19)
+		Me.gbMenu.Name = "gbMenu"
+		Me.gbMenu.Size = New System.Drawing.Size(102, 76)
+		Me.gbMenu.TabIndex = 5
+		Me.gbMenu.TabStop = False
+		Me.gbMenu.Text = "Menu"
 		'
-		'lbISBN
+		'rbData
 		'
-		Me.lbISBN.AutoSize = True
-		Me.lbISBN.Font = New System.Drawing.Font("Lucida Console", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.lbISBN.Location = New System.Drawing.Point(6, 30)
-		Me.lbISBN.Name = "lbISBN"
-		Me.lbISBN.Size = New System.Drawing.Size(108, 24)
-		Me.lbISBN.TabIndex = 0
-		Me.lbISBN.Text = "ISBN : "
+		Me.rbData.AutoSize = True
+		Me.rbData.Location = New System.Drawing.Point(9, 42)
+		Me.rbData.Name = "rbData"
+		Me.rbData.Size = New System.Drawing.Size(90, 17)
+		Me.rbData.TabIndex = 1
+		Me.rbData.TabStop = True
+		Me.rbData.Text = "DataGridView"
+		Me.rbData.UseVisualStyleBackColor = True
 		'
-		'gbScan
+		'rbInput
 		'
-		Me.gbScan.Controls.Add(Me.btCari)
-		Me.gbScan.Controls.Add(Me.tbCariIsbn)
-		Me.gbScan.Controls.Add(Me.lbISBN)
-		Me.gbScan.Location = New System.Drawing.Point(6, 19)
-		Me.gbScan.Name = "gbScan"
-		Me.gbScan.Size = New System.Drawing.Size(324, 76)
-		Me.gbScan.TabIndex = 2
-		Me.gbScan.TabStop = False
-		Me.gbScan.Text = "Scan Buku"
-		'
-		'gbDataBuku
-		'
-		Me.gbDataBuku.Controls.Add(Me.pnInput)
-		Me.gbDataBuku.Controls.Add(Me.pnDGV)
-		Me.gbDataBuku.Location = New System.Drawing.Point(6, 101)
-		Me.gbDataBuku.Name = "gbDataBuku"
-		Me.gbDataBuku.Size = New System.Drawing.Size(764, 246)
-		Me.gbDataBuku.TabIndex = 3
-		Me.gbDataBuku.TabStop = False
-		Me.gbDataBuku.Text = "Data Buku"
-		'
-		'lbCIP
-		'
-		Me.lbCIP.AutoSize = True
-		Me.lbCIP.Font = New System.Drawing.Font("Lucida Console", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.lbCIP.Location = New System.Drawing.Point(8, 19)
-		Me.lbCIP.Name = "lbCIP"
-		Me.lbCIP.Size = New System.Drawing.Size(164, 24)
-		Me.lbCIP.TabIndex = 3
-		Me.lbCIP.Text = "CIP      : "
-		'
-		'TextBox1
-		'
-		Me.TextBox1.Font = New System.Drawing.Font("Lucida Console", 18.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.TextBox1.Location = New System.Drawing.Point(178, 14)
-		Me.TextBox1.Name = "TextBox1"
-		Me.TextBox1.Size = New System.Drawing.Size(57, 31)
-		Me.TextBox1.TabIndex = 3
-		'
-		'tbKode
-		'
-		Me.tbKode.Font = New System.Drawing.Font("Lucida Console", 18.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.tbKode.Location = New System.Drawing.Point(178, 51)
-		Me.tbKode.Name = "tbKode"
-		Me.tbKode.Size = New System.Drawing.Size(89, 31)
-		Me.tbKode.TabIndex = 4
-		'
-		'lbKode
-		'
-		Me.lbKode.AutoSize = True
-		Me.lbKode.Font = New System.Drawing.Font("Lucida Console", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.lbKode.Location = New System.Drawing.Point(8, 54)
-		Me.lbKode.Name = "lbKode"
-		Me.lbKode.Size = New System.Drawing.Size(164, 24)
-		Me.lbKode.TabIndex = 5
-		Me.lbKode.Text = "Kode     : "
-		'
-		'TextBox2
-		'
-		Me.TextBox2.Font = New System.Drawing.Font("Lucida Console", 18.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.TextBox2.Location = New System.Drawing.Point(178, 88)
-		Me.TextBox2.Name = "TextBox2"
-		Me.TextBox2.Size = New System.Drawing.Size(279, 31)
-		Me.TextBox2.TabIndex = 6
-		'
-		'lbJudul
-		'
-		Me.lbJudul.AutoSize = True
-		Me.lbJudul.Font = New System.Drawing.Font("Lucida Console", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.lbJudul.Location = New System.Drawing.Point(8, 88)
-		Me.lbJudul.Name = "lbJudul"
-		Me.lbJudul.Size = New System.Drawing.Size(164, 24)
-		Me.lbJudul.TabIndex = 7
-		Me.lbJudul.Text = "Judul    : "
-		'
-		'TextBox3
-		'
-		Me.TextBox3.Font = New System.Drawing.Font("Lucida Console", 18.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.TextBox3.Location = New System.Drawing.Point(178, 126)
-		Me.TextBox3.Name = "TextBox3"
-		Me.TextBox3.Size = New System.Drawing.Size(43, 31)
-		Me.TextBox3.TabIndex = 8
-		'
-		'lbQty
-		'
-		Me.lbQty.AutoSize = True
-		Me.lbQty.Font = New System.Drawing.Font("Lucida Console", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.lbQty.Location = New System.Drawing.Point(8, 122)
-		Me.lbQty.Name = "lbQty"
-		Me.lbQty.Size = New System.Drawing.Size(164, 24)
-		Me.lbQty.TabIndex = 9
-		Me.lbQty.Text = "Qty      : "
-		'
-		'TextBox4
-		'
-		Me.TextBox4.Font = New System.Drawing.Font("Lucida Console", 18.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.TextBox4.Location = New System.Drawing.Point(178, 163)
-		Me.TextBox4.Name = "TextBox4"
-		Me.TextBox4.Size = New System.Drawing.Size(140, 31)
-		Me.TextBox4.TabIndex = 10
-		'
-		'lbPetugas
-		'
-		Me.lbPetugas.AutoSize = True
-		Me.lbPetugas.Font = New System.Drawing.Font("Lucida Console", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.lbPetugas.Location = New System.Drawing.Point(8, 156)
-		Me.lbPetugas.Name = "lbPetugas"
-		Me.lbPetugas.Size = New System.Drawing.Size(164, 24)
-		Me.lbPetugas.TabIndex = 11
-		Me.lbPetugas.Text = "Petugas  : "
+		Me.rbInput.AutoSize = True
+		Me.rbInput.Location = New System.Drawing.Point(9, 19)
+		Me.rbInput.Name = "rbInput"
+		Me.rbInput.Size = New System.Drawing.Size(49, 17)
+		Me.rbInput.TabIndex = 0
+		Me.rbInput.TabStop = True
+		Me.rbInput.Text = "Input"
+		Me.rbInput.UseVisualStyleBackColor = True
 		'
 		'gbCRUD
 		'
@@ -254,38 +174,16 @@ Partial Class formInput
 		Me.gbCRUD.TabStop = False
 		Me.gbCRUD.Text = "CRUD"
 		'
-		'gbMenu
+		'gbDataBuku
 		'
-		Me.gbMenu.Controls.Add(Me.rbData)
-		Me.gbMenu.Controls.Add(Me.rbInput)
-		Me.gbMenu.Location = New System.Drawing.Point(668, 19)
-		Me.gbMenu.Name = "gbMenu"
-		Me.gbMenu.Size = New System.Drawing.Size(102, 76)
-		Me.gbMenu.TabIndex = 5
-		Me.gbMenu.TabStop = False
-		Me.gbMenu.Text = "Menu"
-		'
-		'rbInput
-		'
-		Me.rbInput.AutoSize = True
-		Me.rbInput.Location = New System.Drawing.Point(9, 19)
-		Me.rbInput.Name = "rbInput"
-		Me.rbInput.Size = New System.Drawing.Size(49, 17)
-		Me.rbInput.TabIndex = 0
-		Me.rbInput.TabStop = True
-		Me.rbInput.Text = "Input"
-		Me.rbInput.UseVisualStyleBackColor = True
-		'
-		'rbData
-		'
-		Me.rbData.AutoSize = True
-		Me.rbData.Location = New System.Drawing.Point(9, 42)
-		Me.rbData.Name = "rbData"
-		Me.rbData.Size = New System.Drawing.Size(90, 17)
-		Me.rbData.TabIndex = 1
-		Me.rbData.TabStop = True
-		Me.rbData.Text = "DataGridView"
-		Me.rbData.UseVisualStyleBackColor = True
+		Me.gbDataBuku.Controls.Add(Me.pnDGV)
+		Me.gbDataBuku.Controls.Add(Me.pnInput)
+		Me.gbDataBuku.Location = New System.Drawing.Point(6, 101)
+		Me.gbDataBuku.Name = "gbDataBuku"
+		Me.gbDataBuku.Size = New System.Drawing.Size(764, 246)
+		Me.gbDataBuku.TabIndex = 3
+		Me.gbDataBuku.TabStop = False
+		Me.gbDataBuku.Text = "Data Buku"
 		'
 		'pnInput
 		'
@@ -304,8 +202,100 @@ Partial Class formInput
 		Me.pnInput.Size = New System.Drawing.Size(752, 221)
 		Me.pnInput.TabIndex = 12
 		'
+		'TextBox2
+		'
+		Me.TextBox2.Font = New System.Drawing.Font("Lucida Console", 18.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.TextBox2.Location = New System.Drawing.Point(178, 88)
+		Me.TextBox2.Name = "TextBox2"
+		Me.TextBox2.Size = New System.Drawing.Size(279, 31)
+		Me.TextBox2.TabIndex = 6
+		'
+		'TextBox4
+		'
+		Me.TextBox4.Font = New System.Drawing.Font("Lucida Console", 18.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.TextBox4.Location = New System.Drawing.Point(178, 163)
+		Me.TextBox4.Name = "TextBox4"
+		Me.TextBox4.Size = New System.Drawing.Size(140, 31)
+		Me.TextBox4.TabIndex = 10
+		'
+		'lbCIP
+		'
+		Me.lbCIP.AutoSize = True
+		Me.lbCIP.Font = New System.Drawing.Font("Lucida Console", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.lbCIP.Location = New System.Drawing.Point(8, 19)
+		Me.lbCIP.Name = "lbCIP"
+		Me.lbCIP.Size = New System.Drawing.Size(164, 24)
+		Me.lbCIP.TabIndex = 3
+		Me.lbCIP.Text = "CIP      : "
+		'
+		'lbPetugas
+		'
+		Me.lbPetugas.AutoSize = True
+		Me.lbPetugas.Font = New System.Drawing.Font("Lucida Console", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.lbPetugas.Location = New System.Drawing.Point(8, 156)
+		Me.lbPetugas.Name = "lbPetugas"
+		Me.lbPetugas.Size = New System.Drawing.Size(164, 24)
+		Me.lbPetugas.TabIndex = 11
+		Me.lbPetugas.Text = "Petugas  : "
+		'
+		'TextBox1
+		'
+		Me.TextBox1.Font = New System.Drawing.Font("Lucida Console", 18.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.TextBox1.Location = New System.Drawing.Point(178, 14)
+		Me.TextBox1.Name = "TextBox1"
+		Me.TextBox1.Size = New System.Drawing.Size(57, 31)
+		Me.TextBox1.TabIndex = 3
+		'
+		'TextBox3
+		'
+		Me.TextBox3.Font = New System.Drawing.Font("Lucida Console", 18.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.TextBox3.Location = New System.Drawing.Point(178, 126)
+		Me.TextBox3.Name = "TextBox3"
+		Me.TextBox3.Size = New System.Drawing.Size(43, 31)
+		Me.TextBox3.TabIndex = 8
+		'
+		'lbKode
+		'
+		Me.lbKode.AutoSize = True
+		Me.lbKode.Font = New System.Drawing.Font("Lucida Console", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.lbKode.Location = New System.Drawing.Point(8, 54)
+		Me.lbKode.Name = "lbKode"
+		Me.lbKode.Size = New System.Drawing.Size(164, 24)
+		Me.lbKode.TabIndex = 5
+		Me.lbKode.Text = "Kode     : "
+		'
+		'lbQty
+		'
+		Me.lbQty.AutoSize = True
+		Me.lbQty.Font = New System.Drawing.Font("Lucida Console", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.lbQty.Location = New System.Drawing.Point(8, 122)
+		Me.lbQty.Name = "lbQty"
+		Me.lbQty.Size = New System.Drawing.Size(164, 24)
+		Me.lbQty.TabIndex = 9
+		Me.lbQty.Text = "Qty      : "
+		'
+		'tbKode
+		'
+		Me.tbKode.Font = New System.Drawing.Font("Lucida Console", 18.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.tbKode.Location = New System.Drawing.Point(178, 51)
+		Me.tbKode.Name = "tbKode"
+		Me.tbKode.Size = New System.Drawing.Size(89, 31)
+		Me.tbKode.TabIndex = 4
+		'
+		'lbJudul
+		'
+		Me.lbJudul.AutoSize = True
+		Me.lbJudul.Font = New System.Drawing.Font("Lucida Console", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.lbJudul.Location = New System.Drawing.Point(8, 88)
+		Me.lbJudul.Name = "lbJudul"
+		Me.lbJudul.Size = New System.Drawing.Size(164, 24)
+		Me.lbJudul.TabIndex = 7
+		Me.lbJudul.Text = "Judul    : "
+		'
 		'pnDGV
 		'
+		Me.pnDGV.Controls.Add(Me.pnCari)
+		Me.pnDGV.Controls.Add(Me.gbLapor)
 		Me.pnDGV.Controls.Add(Me.DataGridView1)
 		Me.pnDGV.Location = New System.Drawing.Point(6, 19)
 		Me.pnDGV.Name = "pnDGV"
@@ -315,10 +305,70 @@ Partial Class formInput
 		'DataGridView1
 		'
 		Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-		Me.DataGridView1.Location = New System.Drawing.Point(3, 3)
+		Me.DataGridView1.Location = New System.Drawing.Point(3, 0)
 		Me.DataGridView1.Name = "DataGridView1"
-		Me.DataGridView1.Size = New System.Drawing.Size(739, 209)
+		Me.DataGridView1.Size = New System.Drawing.Size(582, 209)
 		Me.DataGridView1.TabIndex = 0
+		'
+		'gbScan
+		'
+		Me.gbScan.Controls.Add(Me.tbCariIsbn)
+		Me.gbScan.Controls.Add(Me.btCari)
+		Me.gbScan.Controls.Add(Me.lbISBN)
+		Me.gbScan.Location = New System.Drawing.Point(3, 3)
+		Me.gbScan.Name = "gbScan"
+		Me.gbScan.Size = New System.Drawing.Size(313, 70)
+		Me.gbScan.TabIndex = 2
+		Me.gbScan.TabStop = False
+		Me.gbScan.Text = "Scan Buku"
+		'
+		'tbCariIsbn
+		'
+		Me.tbCariIsbn.Font = New System.Drawing.Font("Lucida Console", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.tbCariIsbn.Location = New System.Drawing.Point(105, 29)
+		Me.tbCariIsbn.Name = "tbCariIsbn"
+		Me.tbCariIsbn.Size = New System.Drawing.Size(145, 28)
+		Me.tbCariIsbn.TabIndex = 1
+		'
+		'lbISBN
+		'
+		Me.lbISBN.AutoSize = True
+		Me.lbISBN.Font = New System.Drawing.Font("Lucida Console", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.lbISBN.Location = New System.Drawing.Point(6, 30)
+		Me.lbISBN.Name = "lbISBN"
+		Me.lbISBN.Size = New System.Drawing.Size(108, 24)
+		Me.lbISBN.TabIndex = 0
+		Me.lbISBN.Text = "ISBN : "
+		'
+		'gbLapor
+		'
+		Me.gbLapor.Controls.Add(Me.btCetak)
+		Me.gbLapor.Controls.Add(Me.btEmailLapor)
+		Me.gbLapor.Controls.Add(Me.TextBox5)
+		Me.gbLapor.Controls.Add(Me.lbLaporCIP)
+		Me.gbLapor.Location = New System.Drawing.Point(594, 0)
+		Me.gbLapor.Name = "gbLapor"
+		Me.gbLapor.Size = New System.Drawing.Size(144, 212)
+		Me.gbLapor.TabIndex = 1
+		Me.gbLapor.TabStop = False
+		Me.gbLapor.Text = "Lapor"
+		'
+		'lbLaporCIP
+		'
+		Me.lbLaporCIP.AutoSize = True
+		Me.lbLaporCIP.Font = New System.Drawing.Font("Lucida Console", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.lbLaporCIP.Location = New System.Drawing.Point(7, 23)
+		Me.lbLaporCIP.Name = "lbLaporCIP"
+		Me.lbLaporCIP.Size = New System.Drawing.Size(81, 19)
+		Me.lbLaporCIP.TabIndex = 0
+		Me.lbLaporCIP.Text = "CIP : "
+		'
+		'TextBox5
+		'
+		Me.TextBox5.Location = New System.Drawing.Point(79, 22)
+		Me.TextBox5.Name = "TextBox5"
+		Me.TextBox5.Size = New System.Drawing.Size(59, 20)
+		Me.TextBox5.TabIndex = 1
 		'
 		'btDelete
 		'
@@ -327,7 +377,7 @@ Partial Class formInput
 		Me.btDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
 		Me.btDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.btDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-		Me.btDelete.Location = New System.Drawing.Point(222, 21)
+		Me.btDelete.Location = New System.Drawing.Point(221, 21)
 		Me.btDelete.Name = "btDelete"
 		Me.btDelete.Size = New System.Drawing.Size(98, 34)
 		Me.btDelete.TabIndex = 2
@@ -337,16 +387,14 @@ Partial Class formInput
 		'
 		'btEditUpdate
 		'
-		Me.btEditUpdate.BackgroundImage = Global.Entahlah.My.Resources.Resources.delete_bin_30px
 		Me.btEditUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
 		Me.btEditUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
 		Me.btEditUpdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.btEditUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-		Me.btEditUpdate.Location = New System.Drawing.Point(101, 20)
+		Me.btEditUpdate.Location = New System.Drawing.Point(96, 21)
 		Me.btEditUpdate.Name = "btEditUpdate"
 		Me.btEditUpdate.Size = New System.Drawing.Size(115, 34)
 		Me.btEditUpdate.TabIndex = 1
-		Me.btEditUpdate.Text = "Edit"
 		Me.btEditUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight
 		Me.btEditUpdate.UseVisualStyleBackColor = True
 		'
@@ -365,13 +413,43 @@ Partial Class formInput
 		Me.btSimpan.TextAlign = System.Drawing.ContentAlignment.MiddleRight
 		Me.btSimpan.UseVisualStyleBackColor = True
 		'
+		'btCetak
+		'
+		Me.btCetak.BackgroundImage = Global.Entahlah.My.Resources.Resources.print_24px
+		Me.btCetak.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+		Me.btCetak.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.btCetak.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.btCetak.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.btCetak.Location = New System.Drawing.Point(36, 123)
+		Me.btCetak.Name = "btCetak"
+		Me.btCetak.Size = New System.Drawing.Size(84, 33)
+		Me.btCetak.TabIndex = 3
+		Me.btCetak.Text = "Cetak"
+		Me.btCetak.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+		Me.btCetak.UseVisualStyleBackColor = True
+		'
+		'btEmailLapor
+		'
+		Me.btEmailLapor.BackgroundImage = Global.Entahlah.My.Resources.Resources.send_email_24px
+		Me.btEmailLapor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+		Me.btEmailLapor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.btEmailLapor.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.btEmailLapor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.btEmailLapor.Location = New System.Drawing.Point(36, 75)
+		Me.btEmailLapor.Name = "btEmailLapor"
+		Me.btEmailLapor.Size = New System.Drawing.Size(84, 33)
+		Me.btEmailLapor.TabIndex = 2
+		Me.btEmailLapor.Text = "Lapor"
+		Me.btEmailLapor.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+		Me.btEmailLapor.UseVisualStyleBackColor = True
+		'
 		'btCari
 		'
 		Me.btCari.BackgroundImage = Global.Entahlah.My.Resources.Resources.search_30px
 		Me.btCari.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
 		Me.btCari.FlatAppearance.BorderSize = 0
 		Me.btCari.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.btCari.Location = New System.Drawing.Point(291, 27)
+		Me.btCari.Location = New System.Drawing.Point(267, 29)
 		Me.btCari.Name = "btCari"
 		Me.btCari.Size = New System.Drawing.Size(33, 28)
 		Me.btCari.TabIndex = 2
@@ -413,6 +491,99 @@ Partial Class formInput
 		Me.btMinimize.TabIndex = 1
 		Me.btMinimize.UseVisualStyleBackColor = False
 		'
+		'pnCari
+		'
+		Me.pnCari.Controls.Add(Me.gbCariData)
+		Me.pnCari.Location = New System.Drawing.Point(21, 33)
+		Me.pnCari.Name = "pnCari"
+		Me.pnCari.Size = New System.Drawing.Size(324, 76)
+		Me.pnCari.TabIndex = 3
+		'
+		'gbCariData
+		'
+		Me.gbCariData.Controls.Add(Me.Button2)
+		Me.gbCariData.Controls.Add(Me.rbJudul)
+		Me.gbCariData.Controls.Add(Me.rbCIP)
+		Me.gbCariData.Controls.Add(Me.rbISBN)
+		Me.gbCariData.Controls.Add(Me.tbCariData)
+		Me.gbCariData.Controls.Add(Me.lbISBN_CIP_Judul)
+		Me.gbCariData.Location = New System.Drawing.Point(6, 8)
+		Me.gbCariData.Name = "gbCariData"
+		Me.gbCariData.Size = New System.Drawing.Size(318, 65)
+		Me.gbCariData.TabIndex = 0
+		Me.gbCariData.TabStop = False
+		Me.gbCariData.Text = "Cari Data"
+		'
+		'lbISBN_CIP_Judul
+		'
+		Me.lbISBN_CIP_Judul.AutoSize = True
+		Me.lbISBN_CIP_Judul.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.lbISBN_CIP_Judul.Location = New System.Drawing.Point(6, 28)
+		Me.lbISBN_CIP_Judul.Name = "lbISBN_CIP_Judul"
+		Me.lbISBN_CIP_Judul.Size = New System.Drawing.Size(12, 16)
+		Me.lbISBN_CIP_Judul.TabIndex = 0
+		Me.lbISBN_CIP_Judul.Text = "."
+		'
+		'tbCariData
+		'
+		Me.tbCariData.Location = New System.Drawing.Point(51, 25)
+		Me.tbCariData.Name = "tbCariData"
+		Me.tbCariData.Size = New System.Drawing.Size(150, 20)
+		Me.tbCariData.TabIndex = 1
+		'
+		'rbISBN
+		'
+		Me.rbISBN.AutoSize = True
+		Me.rbISBN.Location = New System.Drawing.Point(258, 25)
+		Me.rbISBN.Name = "rbISBN"
+		Me.rbISBN.Size = New System.Drawing.Size(50, 17)
+		Me.rbISBN.TabIndex = 2
+		Me.rbISBN.TabStop = True
+		Me.rbISBN.Text = "ISBN"
+		Me.rbISBN.UseVisualStyleBackColor = True
+		'
+		'rbCIP
+		'
+		Me.rbCIP.AutoSize = True
+		Me.rbCIP.Location = New System.Drawing.Point(258, 8)
+		Me.rbCIP.Name = "rbCIP"
+		Me.rbCIP.Size = New System.Drawing.Size(42, 17)
+		Me.rbCIP.TabIndex = 3
+		Me.rbCIP.TabStop = True
+		Me.rbCIP.Text = "CIP"
+		Me.rbCIP.UseVisualStyleBackColor = True
+		'
+		'rbJudul
+		'
+		Me.rbJudul.AutoSize = True
+		Me.rbJudul.Location = New System.Drawing.Point(258, 42)
+		Me.rbJudul.Name = "rbJudul"
+		Me.rbJudul.Size = New System.Drawing.Size(50, 17)
+		Me.rbJudul.TabIndex = 4
+		Me.rbJudul.TabStop = True
+		Me.rbJudul.Text = "Judul"
+		Me.rbJudul.UseVisualStyleBackColor = True
+		'
+		'pnScanBuku
+		'
+		Me.pnScanBuku.Controls.Add(Me.gbScan)
+		Me.pnScanBuku.Location = New System.Drawing.Point(12, 19)
+		Me.pnScanBuku.Name = "pnScanBuku"
+		Me.pnScanBuku.Size = New System.Drawing.Size(318, 76)
+		Me.pnScanBuku.TabIndex = 6
+		'
+		'Button2
+		'
+		Me.Button2.BackgroundImage = Global.Entahlah.My.Resources.Resources.search_30px
+		Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+		Me.Button2.FlatAppearance.BorderSize = 0
+		Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.Button2.Location = New System.Drawing.Point(207, 17)
+		Me.Button2.Name = "Button2"
+		Me.Button2.Size = New System.Drawing.Size(31, 34)
+		Me.Button2.TabIndex = 5
+		Me.Button2.UseVisualStyleBackColor = True
+		'
 		'formInput
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -428,16 +599,22 @@ Partial Class formInput
 		Me.Text = "Form Input"
 		Me.pnWindows.ResumeLayout(False)
 		Me.gbInputBuku.ResumeLayout(False)
-		Me.gbScan.ResumeLayout(False)
-		Me.gbScan.PerformLayout()
-		Me.gbDataBuku.ResumeLayout(False)
-		Me.gbCRUD.ResumeLayout(False)
 		Me.gbMenu.ResumeLayout(False)
 		Me.gbMenu.PerformLayout()
+		Me.gbCRUD.ResumeLayout(False)
+		Me.gbDataBuku.ResumeLayout(False)
 		Me.pnInput.ResumeLayout(False)
 		Me.pnInput.PerformLayout()
 		Me.pnDGV.ResumeLayout(False)
 		CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+		Me.gbScan.ResumeLayout(False)
+		Me.gbScan.PerformLayout()
+		Me.gbLapor.ResumeLayout(False)
+		Me.gbLapor.PerformLayout()
+		Me.pnCari.ResumeLayout(False)
+		Me.gbCariData.ResumeLayout(False)
+		Me.gbCariData.PerformLayout()
+		Me.pnScanBuku.ResumeLayout(False)
 		Me.ResumeLayout(False)
 		Me.PerformLayout()
 
@@ -476,4 +653,18 @@ Partial Class formInput
 	Friend WithEvents btSimpan As Button
 	Friend WithEvents btEditUpdate As Button
 	Friend WithEvents btDelete As Button
+	Friend WithEvents gbLapor As GroupBox
+	Friend WithEvents btEmailLapor As Button
+	Friend WithEvents TextBox5 As TextBox
+	Friend WithEvents lbLaporCIP As Label
+	Friend WithEvents btCetak As Button
+	Friend WithEvents pnCari As Panel
+	Friend WithEvents gbCariData As GroupBox
+	Friend WithEvents rbJudul As RadioButton
+	Friend WithEvents rbCIP As RadioButton
+	Friend WithEvents rbISBN As RadioButton
+	Friend WithEvents tbCariData As TextBox
+	Friend WithEvents lbISBN_CIP_Judul As Label
+	Friend WithEvents pnScanBuku As Panel
+	Friend WithEvents Button2 As Button
 End Class
