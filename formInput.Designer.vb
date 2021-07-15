@@ -30,6 +30,15 @@ Partial Class formInput
 		Me.lbHeader = New System.Windows.Forms.Label()
 		Me.tmLabel = New System.Windows.Forms.Timer(Me.components)
 		Me.gbInputBuku = New System.Windows.Forms.GroupBox()
+		Me.pnScanBuku = New System.Windows.Forms.Panel()
+		Me.gbScan = New System.Windows.Forms.GroupBox()
+		Me.tbCariIsbn = New System.Windows.Forms.TextBox()
+		Me.btCari = New System.Windows.Forms.Button()
+		Me.lbISBN = New System.Windows.Forms.Label()
+		Me.gbCRUD = New System.Windows.Forms.GroupBox()
+		Me.btDelete = New System.Windows.Forms.Button()
+		Me.btEditUpdate = New System.Windows.Forms.Button()
+		Me.btSimpan = New System.Windows.Forms.Button()
 		Me.gbDataBuku = New System.Windows.Forms.GroupBox()
 		Me.pnInput = New System.Windows.Forms.Panel()
 		Me.dtpTanggal = New System.Windows.Forms.DateTimePicker()
@@ -43,15 +52,6 @@ Partial Class formInput
 		Me.lbQty = New System.Windows.Forms.Label()
 		Me.tbKode = New System.Windows.Forms.TextBox()
 		Me.lbJudul = New System.Windows.Forms.Label()
-		Me.pnScanBuku = New System.Windows.Forms.Panel()
-		Me.gbScan = New System.Windows.Forms.GroupBox()
-		Me.tbCariIsbn = New System.Windows.Forms.TextBox()
-		Me.btCari = New System.Windows.Forms.Button()
-		Me.lbISBN = New System.Windows.Forms.Label()
-		Me.gbMenu = New System.Windows.Forms.GroupBox()
-		Me.rbData = New System.Windows.Forms.RadioButton()
-		Me.rbInput = New System.Windows.Forms.RadioButton()
-		Me.gbCRUD = New System.Windows.Forms.GroupBox()
 		Me.pnDGV = New System.Windows.Forms.Panel()
 		Me.gbLapor = New System.Windows.Forms.GroupBox()
 		Me.btCetak = New System.Windows.Forms.Button()
@@ -59,9 +59,9 @@ Partial Class formInput
 		Me.TextBox5 = New System.Windows.Forms.TextBox()
 		Me.lbLaporCIP = New System.Windows.Forms.Label()
 		Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-		Me.btDelete = New System.Windows.Forms.Button()
-		Me.btEditUpdate = New System.Windows.Forms.Button()
-		Me.btSimpan = New System.Windows.Forms.Button()
+		Me.gbMenu = New System.Windows.Forms.GroupBox()
+		Me.rbData = New System.Windows.Forms.RadioButton()
+		Me.rbInput = New System.Windows.Forms.RadioButton()
 		Me.pnCari = New System.Windows.Forms.Panel()
 		Me.gbCariData = New System.Windows.Forms.GroupBox()
 		Me.Button2 = New System.Windows.Forms.Button()
@@ -70,20 +70,22 @@ Partial Class formInput
 		Me.rbISBN = New System.Windows.Forms.RadioButton()
 		Me.tbCariData = New System.Windows.Forms.TextBox()
 		Me.lbISBN_CIP_Judul = New System.Windows.Forms.Label()
-		Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
 		Me.lbStatusBRDJKT = New System.Windows.Forms.Label()
 		Me.lbStatusINV = New System.Windows.Forms.Label()
+		Me.tbWeb = New System.Windows.Forms.TextBox()
+		Me.rtbWeb = New System.Windows.Forms.RichTextBox()
+		Me.TbPotong = New System.Windows.Forms.TextBox()
 		Me.pnWindows.SuspendLayout()
 		Me.gbInputBuku.SuspendLayout()
-		Me.gbDataBuku.SuspendLayout()
-		Me.pnInput.SuspendLayout()
 		Me.pnScanBuku.SuspendLayout()
 		Me.gbScan.SuspendLayout()
-		Me.gbMenu.SuspendLayout()
 		Me.gbCRUD.SuspendLayout()
+		Me.gbDataBuku.SuspendLayout()
+		Me.pnInput.SuspendLayout()
 		Me.pnDGV.SuspendLayout()
 		Me.gbLapor.SuspendLayout()
 		CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+		Me.gbMenu.SuspendLayout()
 		Me.pnCari.SuspendLayout()
 		Me.gbCariData.SuspendLayout()
 		Me.SuspendLayout()
@@ -103,7 +105,7 @@ Partial Class formInput
 		'Button1
 		'
 		Me.Button1.BackColor = System.Drawing.Color.LightBlue
-		Me.Button1.BackgroundImage = Global.Entahlah.My.Resources.Resources.close_window_32px1
+		Me.Button1.BackgroundImage = Global.NonCIP.My.Resources.Resources.close_window_32px1
 		Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
 		Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
 		Me.Button1.Location = New System.Drawing.Point(768, 0)
@@ -115,7 +117,7 @@ Partial Class formInput
 		'btMaximize
 		'
 		Me.btMaximize.BackColor = System.Drawing.Color.LightBlue
-		Me.btMaximize.BackgroundImage = Global.Entahlah.My.Resources.Resources.maximize_window_32px
+		Me.btMaximize.BackgroundImage = Global.NonCIP.My.Resources.Resources.maximize_window_32px
 		Me.btMaximize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
 		Me.btMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat
 		Me.btMaximize.Location = New System.Drawing.Point(730, 0)
@@ -127,7 +129,7 @@ Partial Class formInput
 		'btMinimize
 		'
 		Me.btMinimize.BackColor = System.Drawing.Color.LightBlue
-		Me.btMinimize.BackgroundImage = Global.Entahlah.My.Resources.Resources.minimize_window_32px
+		Me.btMinimize.BackgroundImage = Global.NonCIP.My.Resources.Resources.minimize_window_32px
 		Me.btMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
 		Me.btMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat
 		Me.btMinimize.Location = New System.Drawing.Point(692, 0)
@@ -168,6 +170,111 @@ Partial Class formInput
 		Me.gbInputBuku.Size = New System.Drawing.Size(776, 353)
 		Me.gbInputBuku.TabIndex = 2
 		Me.gbInputBuku.TabStop = False
+		'
+		'pnScanBuku
+		'
+		Me.pnScanBuku.Controls.Add(Me.gbScan)
+		Me.pnScanBuku.Location = New System.Drawing.Point(12, 19)
+		Me.pnScanBuku.Name = "pnScanBuku"
+		Me.pnScanBuku.Size = New System.Drawing.Size(324, 76)
+		Me.pnScanBuku.TabIndex = 6
+		'
+		'gbScan
+		'
+		Me.gbScan.Controls.Add(Me.tbCariIsbn)
+		Me.gbScan.Controls.Add(Me.btCari)
+		Me.gbScan.Controls.Add(Me.lbISBN)
+		Me.gbScan.Location = New System.Drawing.Point(5, 0)
+		Me.gbScan.Name = "gbScan"
+		Me.gbScan.Size = New System.Drawing.Size(313, 70)
+		Me.gbScan.TabIndex = 2
+		Me.gbScan.TabStop = False
+		Me.gbScan.Text = "Scan Buku"
+		'
+		'tbCariIsbn
+		'
+		Me.tbCariIsbn.Font = New System.Drawing.Font("Lucida Console", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.tbCariIsbn.Location = New System.Drawing.Point(105, 29)
+		Me.tbCariIsbn.Name = "tbCariIsbn"
+		Me.tbCariIsbn.Size = New System.Drawing.Size(145, 28)
+		Me.tbCariIsbn.TabIndex = 1
+		'
+		'btCari
+		'
+		Me.btCari.BackgroundImage = Global.NonCIP.My.Resources.Resources.search_30px
+		Me.btCari.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+		Me.btCari.FlatAppearance.BorderSize = 0
+		Me.btCari.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.btCari.Location = New System.Drawing.Point(267, 29)
+		Me.btCari.Name = "btCari"
+		Me.btCari.Size = New System.Drawing.Size(33, 28)
+		Me.btCari.TabIndex = 2
+		Me.btCari.UseVisualStyleBackColor = True
+		'
+		'lbISBN
+		'
+		Me.lbISBN.AutoSize = True
+		Me.lbISBN.Font = New System.Drawing.Font("Lucida Console", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.lbISBN.Location = New System.Drawing.Point(6, 30)
+		Me.lbISBN.Name = "lbISBN"
+		Me.lbISBN.Size = New System.Drawing.Size(108, 24)
+		Me.lbISBN.TabIndex = 0
+		Me.lbISBN.Text = "ISBN : "
+		'
+		'gbCRUD
+		'
+		Me.gbCRUD.Controls.Add(Me.btDelete)
+		Me.gbCRUD.Controls.Add(Me.btEditUpdate)
+		Me.gbCRUD.Controls.Add(Me.btSimpan)
+		Me.gbCRUD.Location = New System.Drawing.Point(339, 19)
+		Me.gbCRUD.Name = "gbCRUD"
+		Me.gbCRUD.Size = New System.Drawing.Size(326, 76)
+		Me.gbCRUD.TabIndex = 4
+		Me.gbCRUD.TabStop = False
+		Me.gbCRUD.Text = "CRUD"
+		'
+		'btDelete
+		'
+		Me.btDelete.BackgroundImage = Global.NonCIP.My.Resources.Resources.delete_bin_30px
+		Me.btDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+		Me.btDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.btDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.btDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.btDelete.Location = New System.Drawing.Point(221, 21)
+		Me.btDelete.Name = "btDelete"
+		Me.btDelete.Size = New System.Drawing.Size(98, 34)
+		Me.btDelete.TabIndex = 2
+		Me.btDelete.Text = "Delete"
+		Me.btDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+		Me.btDelete.UseVisualStyleBackColor = True
+		'
+		'btEditUpdate
+		'
+		Me.btEditUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+		Me.btEditUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.btEditUpdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.btEditUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.btEditUpdate.Location = New System.Drawing.Point(96, 21)
+		Me.btEditUpdate.Name = "btEditUpdate"
+		Me.btEditUpdate.Size = New System.Drawing.Size(115, 34)
+		Me.btEditUpdate.TabIndex = 1
+		Me.btEditUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+		Me.btEditUpdate.UseVisualStyleBackColor = True
+		'
+		'btSimpan
+		'
+		Me.btSimpan.BackgroundImage = Global.NonCIP.My.Resources.Resources.save_30px
+		Me.btSimpan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+		Me.btSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.btSimpan.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.btSimpan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.btSimpan.Location = New System.Drawing.Point(6, 21)
+		Me.btSimpan.Name = "btSimpan"
+		Me.btSimpan.Size = New System.Drawing.Size(80, 34)
+		Me.btSimpan.TabIndex = 0
+		Me.btSimpan.Text = "Save"
+		Me.btSimpan.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+		Me.btSimpan.UseVisualStyleBackColor = True
 		'
 		'gbDataBuku
 		'
@@ -298,101 +405,6 @@ Partial Class formInput
 		Me.lbJudul.TabIndex = 7
 		Me.lbJudul.Text = "Judul    : "
 		'
-		'pnScanBuku
-		'
-		Me.pnScanBuku.Controls.Add(Me.gbScan)
-		Me.pnScanBuku.Location = New System.Drawing.Point(12, 19)
-		Me.pnScanBuku.Name = "pnScanBuku"
-		Me.pnScanBuku.Size = New System.Drawing.Size(324, 76)
-		Me.pnScanBuku.TabIndex = 6
-		'
-		'gbScan
-		'
-		Me.gbScan.Controls.Add(Me.tbCariIsbn)
-		Me.gbScan.Controls.Add(Me.btCari)
-		Me.gbScan.Controls.Add(Me.lbISBN)
-		Me.gbScan.Location = New System.Drawing.Point(5, 0)
-		Me.gbScan.Name = "gbScan"
-		Me.gbScan.Size = New System.Drawing.Size(313, 70)
-		Me.gbScan.TabIndex = 2
-		Me.gbScan.TabStop = False
-		Me.gbScan.Text = "Scan Buku"
-		'
-		'tbCariIsbn
-		'
-		Me.tbCariIsbn.Font = New System.Drawing.Font("Lucida Console", 15.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.tbCariIsbn.Location = New System.Drawing.Point(105, 29)
-		Me.tbCariIsbn.Name = "tbCariIsbn"
-		Me.tbCariIsbn.Size = New System.Drawing.Size(145, 28)
-		Me.tbCariIsbn.TabIndex = 1
-		'
-		'btCari
-		'
-		Me.btCari.BackgroundImage = Global.Entahlah.My.Resources.Resources.search_30px
-		Me.btCari.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-		Me.btCari.FlatAppearance.BorderSize = 0
-		Me.btCari.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.btCari.Location = New System.Drawing.Point(267, 29)
-		Me.btCari.Name = "btCari"
-		Me.btCari.Size = New System.Drawing.Size(33, 28)
-		Me.btCari.TabIndex = 2
-		Me.btCari.UseVisualStyleBackColor = True
-		'
-		'lbISBN
-		'
-		Me.lbISBN.AutoSize = True
-		Me.lbISBN.Font = New System.Drawing.Font("Lucida Console", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.lbISBN.Location = New System.Drawing.Point(6, 30)
-		Me.lbISBN.Name = "lbISBN"
-		Me.lbISBN.Size = New System.Drawing.Size(108, 24)
-		Me.lbISBN.TabIndex = 0
-		Me.lbISBN.Text = "ISBN : "
-		'
-		'gbMenu
-		'
-		Me.gbMenu.Controls.Add(Me.rbData)
-		Me.gbMenu.Controls.Add(Me.rbInput)
-		Me.gbMenu.Location = New System.Drawing.Point(668, 19)
-		Me.gbMenu.Name = "gbMenu"
-		Me.gbMenu.Size = New System.Drawing.Size(102, 76)
-		Me.gbMenu.TabIndex = 5
-		Me.gbMenu.TabStop = False
-		Me.gbMenu.Text = "Menu"
-		'
-		'rbData
-		'
-		Me.rbData.AutoSize = True
-		Me.rbData.Location = New System.Drawing.Point(9, 42)
-		Me.rbData.Name = "rbData"
-		Me.rbData.Size = New System.Drawing.Size(90, 17)
-		Me.rbData.TabIndex = 1
-		Me.rbData.TabStop = True
-		Me.rbData.Text = "DataGridView"
-		Me.rbData.UseVisualStyleBackColor = True
-		'
-		'rbInput
-		'
-		Me.rbInput.AutoSize = True
-		Me.rbInput.Location = New System.Drawing.Point(9, 19)
-		Me.rbInput.Name = "rbInput"
-		Me.rbInput.Size = New System.Drawing.Size(49, 17)
-		Me.rbInput.TabIndex = 0
-		Me.rbInput.TabStop = True
-		Me.rbInput.Text = "Input"
-		Me.rbInput.UseVisualStyleBackColor = True
-		'
-		'gbCRUD
-		'
-		Me.gbCRUD.Controls.Add(Me.btDelete)
-		Me.gbCRUD.Controls.Add(Me.btEditUpdate)
-		Me.gbCRUD.Controls.Add(Me.btSimpan)
-		Me.gbCRUD.Location = New System.Drawing.Point(339, 19)
-		Me.gbCRUD.Name = "gbCRUD"
-		Me.gbCRUD.Size = New System.Drawing.Size(326, 76)
-		Me.gbCRUD.TabIndex = 4
-		Me.gbCRUD.TabStop = False
-		Me.gbCRUD.Text = "CRUD"
-		'
 		'pnDGV
 		'
 		Me.pnDGV.Controls.Add(Me.gbLapor)
@@ -417,7 +429,7 @@ Partial Class formInput
 		'
 		'btCetak
 		'
-		Me.btCetak.BackgroundImage = Global.Entahlah.My.Resources.Resources.print_24px
+		Me.btCetak.BackgroundImage = Global.NonCIP.My.Resources.Resources.print_24px
 		Me.btCetak.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
 		Me.btCetak.FlatStyle = System.Windows.Forms.FlatStyle.Flat
 		Me.btCetak.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -432,7 +444,7 @@ Partial Class formInput
 		'
 		'btEmailLapor
 		'
-		Me.btEmailLapor.BackgroundImage = Global.Entahlah.My.Resources.Resources.send_email_24px
+		Me.btEmailLapor.BackgroundImage = Global.NonCIP.My.Resources.Resources.send_email_24px
 		Me.btEmailLapor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
 		Me.btEmailLapor.FlatStyle = System.Windows.Forms.FlatStyle.Flat
 		Me.btEmailLapor.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -470,48 +482,38 @@ Partial Class formInput
 		Me.DataGridView1.Size = New System.Drawing.Size(582, 209)
 		Me.DataGridView1.TabIndex = 0
 		'
-		'btDelete
+		'gbMenu
 		'
-		Me.btDelete.BackgroundImage = Global.Entahlah.My.Resources.Resources.delete_bin_30px
-		Me.btDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-		Me.btDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.btDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.btDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-		Me.btDelete.Location = New System.Drawing.Point(221, 21)
-		Me.btDelete.Name = "btDelete"
-		Me.btDelete.Size = New System.Drawing.Size(98, 34)
-		Me.btDelete.TabIndex = 2
-		Me.btDelete.Text = "Delete"
-		Me.btDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-		Me.btDelete.UseVisualStyleBackColor = True
+		Me.gbMenu.Controls.Add(Me.rbData)
+		Me.gbMenu.Controls.Add(Me.rbInput)
+		Me.gbMenu.Location = New System.Drawing.Point(668, 19)
+		Me.gbMenu.Name = "gbMenu"
+		Me.gbMenu.Size = New System.Drawing.Size(102, 76)
+		Me.gbMenu.TabIndex = 5
+		Me.gbMenu.TabStop = False
+		Me.gbMenu.Text = "Menu"
 		'
-		'btEditUpdate
+		'rbData
 		'
-		Me.btEditUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-		Me.btEditUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.btEditUpdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.btEditUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-		Me.btEditUpdate.Location = New System.Drawing.Point(96, 21)
-		Me.btEditUpdate.Name = "btEditUpdate"
-		Me.btEditUpdate.Size = New System.Drawing.Size(115, 34)
-		Me.btEditUpdate.TabIndex = 1
-		Me.btEditUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-		Me.btEditUpdate.UseVisualStyleBackColor = True
+		Me.rbData.AutoSize = True
+		Me.rbData.Location = New System.Drawing.Point(9, 42)
+		Me.rbData.Name = "rbData"
+		Me.rbData.Size = New System.Drawing.Size(90, 17)
+		Me.rbData.TabIndex = 1
+		Me.rbData.TabStop = True
+		Me.rbData.Text = "DataGridView"
+		Me.rbData.UseVisualStyleBackColor = True
 		'
-		'btSimpan
+		'rbInput
 		'
-		Me.btSimpan.BackgroundImage = Global.Entahlah.My.Resources.Resources.save_30px
-		Me.btSimpan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-		Me.btSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.btSimpan.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.btSimpan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-		Me.btSimpan.Location = New System.Drawing.Point(6, 21)
-		Me.btSimpan.Name = "btSimpan"
-		Me.btSimpan.Size = New System.Drawing.Size(80, 34)
-		Me.btSimpan.TabIndex = 0
-		Me.btSimpan.Text = "Save"
-		Me.btSimpan.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-		Me.btSimpan.UseVisualStyleBackColor = True
+		Me.rbInput.AutoSize = True
+		Me.rbInput.Location = New System.Drawing.Point(9, 19)
+		Me.rbInput.Name = "rbInput"
+		Me.rbInput.Size = New System.Drawing.Size(49, 17)
+		Me.rbInput.TabIndex = 0
+		Me.rbInput.TabStop = True
+		Me.rbInput.Text = "Input"
+		Me.rbInput.UseVisualStyleBackColor = True
 		'
 		'pnCari
 		'
@@ -538,7 +540,7 @@ Partial Class formInput
 		'
 		'Button2
 		'
-		Me.Button2.BackgroundImage = Global.Entahlah.My.Resources.Resources.search_30px
+		Me.Button2.BackgroundImage = Global.NonCIP.My.Resources.Resources.search_30px
 		Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
 		Me.Button2.FlatAppearance.BorderSize = 0
 		Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -618,12 +620,37 @@ Partial Class formInput
 		Me.lbStatusINV.TabIndex = 4
 		Me.lbStatusINV.Text = "...."
 		'
+		'tbWeb
+		'
+		Me.tbWeb.Location = New System.Drawing.Point(29, 460)
+		Me.tbWeb.Name = "tbWeb"
+		Me.tbWeb.Size = New System.Drawing.Size(591, 20)
+		Me.tbWeb.TabIndex = 5
+		'
+		'rtbWeb
+		'
+		Me.rtbWeb.Location = New System.Drawing.Point(29, 444)
+		Me.rtbWeb.Name = "rtbWeb"
+		Me.rtbWeb.Size = New System.Drawing.Size(591, 10)
+		Me.rtbWeb.TabIndex = 6
+		Me.rtbWeb.Text = ""
+		'
+		'TbPotong
+		'
+		Me.TbPotong.Location = New System.Drawing.Point(29, 486)
+		Me.TbPotong.Name = "TbPotong"
+		Me.TbPotong.Size = New System.Drawing.Size(591, 20)
+		Me.TbPotong.TabIndex = 7
+		'
 		'formInput
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
 		Me.BackColor = System.Drawing.Color.Aqua
-		Me.ClientSize = New System.Drawing.Size(800, 481)
+		Me.ClientSize = New System.Drawing.Size(800, 482)
+		Me.Controls.Add(Me.TbPotong)
+		Me.Controls.Add(Me.rtbWeb)
+		Me.Controls.Add(Me.tbWeb)
 		Me.Controls.Add(Me.lbStatusINV)
 		Me.Controls.Add(Me.lbStatusBRDJKT)
 		Me.Controls.Add(Me.gbInputBuku)
@@ -635,19 +662,19 @@ Partial Class formInput
 		Me.Text = "Form Input"
 		Me.pnWindows.ResumeLayout(False)
 		Me.gbInputBuku.ResumeLayout(False)
-		Me.gbDataBuku.ResumeLayout(False)
-		Me.pnInput.ResumeLayout(False)
-		Me.pnInput.PerformLayout()
 		Me.pnScanBuku.ResumeLayout(False)
 		Me.gbScan.ResumeLayout(False)
 		Me.gbScan.PerformLayout()
-		Me.gbMenu.ResumeLayout(False)
-		Me.gbMenu.PerformLayout()
 		Me.gbCRUD.ResumeLayout(False)
+		Me.gbDataBuku.ResumeLayout(False)
+		Me.pnInput.ResumeLayout(False)
+		Me.pnInput.PerformLayout()
 		Me.pnDGV.ResumeLayout(False)
 		Me.gbLapor.ResumeLayout(False)
 		Me.gbLapor.PerformLayout()
 		CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+		Me.gbMenu.ResumeLayout(False)
+		Me.gbMenu.PerformLayout()
 		Me.pnCari.ResumeLayout(False)
 		Me.gbCariData.ResumeLayout(False)
 		Me.gbCariData.PerformLayout()
@@ -667,7 +694,6 @@ Partial Class formInput
 	Friend WithEvents lbISBN As Label
 	Friend WithEvents gbScan As GroupBox
 	Friend WithEvents btCari As Button
-	Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
 	Friend WithEvents gbDataBuku As GroupBox
 	Friend WithEvents tbCIP As TextBox
 	Friend WithEvents lbCIP As Label
@@ -706,4 +732,7 @@ Partial Class formInput
 	Public WithEvents lbStatusBRDJKT As Label
 	Public WithEvents lbStatusINV As Label
 	Friend WithEvents dtpTanggal As DateTimePicker
+	Friend WithEvents tbWeb As TextBox
+	Friend WithEvents rtbWeb As RichTextBox
+	Friend WithEvents TbPotong As TextBox
 End Class
